@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- poppin font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <title>Agent Portal</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-head">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <img class="logo-size" src="img/remax-millennium-logo.png" alt="logo">
+                    </div>
+                    <!-- col-3 -->
+                    <div class="col-lg-7">
+                        <div class="searchbar">
+                            <div class="d-flex align-items-center justify-content-center">
+
+                                <div class="search-line position-relative">
+                                    <span><i class="fas fa-search"></i></span><input id="searchQueryInput"
+                                        class="magnify" type="text" name="searchQueryInput" placeholder="Search...."
+                                        value="" />
+                                </div>
+                                <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="#fff"
+                                            d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col-7 -->
+                    <div class="col-lg-3">
+
+                        <div class="d-flex align-items-center justify-content-end">
+
+                            <div class="cart">
+                                <a href="javascrip:void(0)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-cart2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="notification">
+                                <a href="javascrip:void(0)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bell" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="user-dropdown">
+                                <div class="d-flex align-items-center">
+                                    <img class="user-img" src="img/Ron%201.svg" alt="ron">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Ron Sally</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select><!-- dropdown -->
+                                </div> <!-- d-flex -->
+                            </div> <!--  user-dropdown -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+        </div><!-- top-head -->
+
+        <div class="bottom-head">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <div class="flex_sec">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item tab-link">
+                                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item tab-link active">
+                                            <a class="nav-link" href="pre-construction.html">Pre-Construction</a>
+                                        </li>
+                                        <li class="nav-item tab-link">
+                                            <a class="nav-link" href="#">Video</a>
+                                        </li>
+
+                                        <li class="nav-item tab-link">
+                                            <a class="nav-link" href="trainings.html">Trainings</a>
+                                        </li>
+
+                                        <li class="nav-item tab-link">
+                                            <a class="nav-link" href="mortage.html">Mortgage</a>
+                                        </li>
+                                        <li class="nav-item tab-link">
+                                            <a class="nav-link" href="marketing.html">Marketing</a>
+                                        </li>
+                                    </ul>
+
+                                    <a href="support.html" class="Support">Support <img src="img/07.svg" alt=""></a>
+                                </div>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="side_bar">
+        <div class="side_fixed">
+            <div class="icon_bar">
+                <div class="rel">
+                    <div class="minum_prot">
+                        <div class="eror">
+                            <a href="#">
+                                <img src="img/side-next.png" alt="">
+                                <img src="img/side-next.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#"><img src="img/i1.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/I2.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/offer-submulation.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/tranction.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/tbd.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/bookmeting.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/tranction.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/pre-con.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/clauas.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/form-check.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/tranction.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/bookmeting.svg" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="icon_name_bar">
+                <div class="minum_prot">
+                    <a href="#">millennium Portal</a>
+                </div>
+                <ul>
+                    <li><a href="#">pre-con worksheet</a></li>
+                    <li><a href="#">Mortgage Application</a></li>
+                    <li><a href="#">Offer Submission</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <li><a href="#">TBD</a></li>
+                    <li><a href="#">Book Meeting Room</a></li>
+                    <li><a href="#">Pre-Con Buyer Request Form</a></li>
+                    <li><a href="#">Agent Referral</a></li>
+                    <li><a href="#">Clauses</a></li>
+                    <li><a href="#">Form Checklist</a></li>
+                    <li><a href="#">Guides And Presentation</a></li>
+                    <li><a href="#">Knowledge Bank</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page_wrapper">
+        <section class="platinum_project">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-12">
+                        <div class="togle">
+                            <div class="project_toggle">
+                                <input type="checkbox">
+                                <h4>Platinum Projects</h4>
+                            </div>
+
+                            <div class="togle_list">
+                                <ul>
+                                    <li>
+                                        <div class="img_box"><img src="img/togle_icon.svg" alt=""></div> Commission
+                                        Calculator
+                                    </li>
+                                    <li>
+                                        <div class="img_box"><img src="img/i1.svg" alt=""></div> Submit Worksheet
+                                    </li>
+                                    <li>
+                                        <div class="img_box"><img src="img/i1.svg" alt=""></div> Client’s Pre-Approval
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="list_change">
+                            <div class="multi_select">
+                                <ul>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Developer</option>
+                                        </select>
+                                    </li>
+
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Price Range</option>
+                                        </select>
+                                    </li>
+
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Property Type</option>
+                                        </select>
+                                    </li>
+
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Selling Status</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="change_sec">
+                                <div class="switches-container">
+                                    <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly"
+                                        checked="checked" />
+                                    <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
+                                    <label for="switchMonthly" class="map">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18.497" height="14.541"
+                                            viewBox="0 0 18.497 14.541">
+                                            <g id="Group_447" data-name="Group 447" transform="translate(0 0)">
+                                                <path id="Path_1641" data-name="Path 1641"
+                                                    d="M-2884.009,2302.152v13.242c-.332-.079-.655-.155-.978-.235q-1.811-.445-3.622-.892c-.523-.128-.675-.315-.675-.847v-11.643a.673.673,0,0,1,.938-.732l4.135,1.047C-2884.146,2302.109-2884.082,2302.13-2884.009,2302.152Z"
+                                                    transform="translate(2889.285 -2301.006)" />
+                                                <path id="Path_1642" data-name="Path 1642"
+                                                    d="M-2569.69,2318.105v-13.247c.333.08.658.154.981.234l3.662.9a.7.7,0,0,1,.632.8q0,5.841,0,11.683a.692.692,0,0,1-.94.73C-2566.793,2318.843-2568.231,2318.476-2569.69,2318.105Z"
+                                                    transform="translate(2582.911 -2304.699)" />
+                                                <path id="Path_1643" data-name="Path 1643"
+                                                    d="M-2723.992,2304.733v13.212l-5.263,1.053v-13.211Z"
+                                                    transform="translate(2735.875 -2304.579)" />
+                                            </g>
+                                        </svg>
+                                        List View
+                                    </label>
+                                    <label for="switchYearly" class="map">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18.497" height="14.541"
+                                            viewBox="0 0 18.497 14.541">
+                                            <g id="Group_447" data-name="Group 447" transform="translate(0 0)">
+                                                <path id="Path_1641" data-name="Path 1641"
+                                                    d="M-2884.009,2302.152v13.242c-.332-.079-.655-.155-.978-.235q-1.811-.445-3.622-.892c-.523-.128-.675-.315-.675-.847v-11.643a.673.673,0,0,1,.938-.732l4.135,1.047C-2884.146,2302.109-2884.082,2302.13-2884.009,2302.152Z"
+                                                    transform="translate(2889.285 -2301.006)" />
+                                                <path id="Path_1642" data-name="Path 1642"
+                                                    d="M-2569.69,2318.105v-13.247c.333.08.658.154.981.234l3.662.9a.7.7,0,0,1,.632.8q0,5.841,0,11.683a.692.692,0,0,1-.94.73C-2566.793,2318.843-2568.231,2318.476-2569.69,2318.105Z"
+                                                    transform="translate(2582.911 -2304.699)" />
+                                                <path id="Path_1643" data-name="Path 1643"
+                                                    d="M-2723.992,2304.733v13.212l-5.263,1.053v-13.211Z"
+                                                    transform="translate(2735.875 -2304.579)" />
+                                            </g>
+                                        </svg>
+                                        Map View
+                                    </label>
+                                    <div class="switch-wrapper">
+                                        <div class="switch">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.497" height="14.541"
+                                                    viewBox="0 0 18.497 14.541">
+                                                    <g id="Group_447" data-name="Group 447" transform="translate(0 0)">
+                                                        <path id="Path_1641" data-name="Path 1641"
+                                                            d="M-2884.009,2302.152v13.242c-.332-.079-.655-.155-.978-.235q-1.811-.445-3.622-.892c-.523-.128-.675-.315-.675-.847v-11.643a.673.673,0,0,1,.938-.732l4.135,1.047C-2884.146,2302.109-2884.082,2302.13-2884.009,2302.152Z"
+                                                            transform="translate(2889.285 -2301.006)" />
+                                                        <path id="Path_1642" data-name="Path 1642"
+                                                            d="M-2569.69,2318.105v-13.247c.333.08.658.154.981.234l3.662.9a.7.7,0,0,1,.632.8q0,5.841,0,11.683a.692.692,0,0,1-.94.73C-2566.793,2318.843-2568.231,2318.476-2569.69,2318.105Z"
+                                                            transform="translate(2582.911 -2304.699)" />
+                                                        <path id="Path_1643" data-name="Path 1643"
+                                                            d="M-2723.992,2304.733v13.212l-5.263,1.053v-13.211Z"
+                                                            transform="translate(2735.875 -2304.579)" />
+                                                    </g>
+                                                </svg>
+                                                List View
+                                            </div>
+                                            <div class="map">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.497" height="14.541"
+                                                    viewBox="0 0 18.497 14.541">
+                                                    <g id="Group_447" data-name="Group 447" transform="translate(0 0)">
+                                                        <path id="Path_1641" data-name="Path 1641"
+                                                            d="M-2884.009,2302.152v13.242c-.332-.079-.655-.155-.978-.235q-1.811-.445-3.622-.892c-.523-.128-.675-.315-.675-.847v-11.643a.673.673,0,0,1,.938-.732l4.135,1.047C-2884.146,2302.109-2884.082,2302.13-2884.009,2302.152Z"
+                                                            transform="translate(2889.285 -2301.006)" />
+                                                        <path id="Path_1642" data-name="Path 1642"
+                                                            d="M-2569.69,2318.105v-13.247c.333.08.658.154.981.234l3.662.9a.7.7,0,0,1,.632.8q0,5.841,0,11.683a.692.692,0,0,1-.94.73C-2566.793,2318.843-2568.231,2318.476-2569.69,2318.105Z"
+                                                            transform="translate(2582.911 -2304.699)" />
+                                                        <path id="Path_1643" data-name="Path 1643"
+                                                            d="M-2723.992,2304.733v13.212l-5.263,1.053v-13.211Z"
+                                                            transform="translate(2735.875 -2304.579)" />
+                                                    </g>
+                                                </svg>
+                                                Map View
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search_cta">
+                                <button>Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid">
+                <div class="map_box">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-12">
+
+                            <div class="flot">
+                                <div class="flex_map">
+                                    <div class="left_map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184986.1404337991!2d-79.65915598008573!3d43.577208080455506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b469fe76b05b7%3A0x3146cbed75966db!2sMississauga%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1685650303723!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="map_content">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/conds.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="pre-construction-lsq-condos.html">View Project</a>
+                                                        <a href="compare.html">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/Raglan.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>Raglan House</h4>
+
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/LSQ Condos.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/conds.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/Raglan.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>Raglan House</h4>
+
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/LSQ Condos.png" alt="">
+                                                    <p>Selling Now</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/conds.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/Raglan.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>Raglan House</h4>
+
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/LSQ Condos.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/conds.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/Raglan.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>Raglan House</h4>
+
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/LSQ Condos.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/conds.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/Raglan.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>Raglan House</h4>
+
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="condt_content">
+                                                <div class="rel_img">
+                                                    <img src="img/LSQ Condos.png" alt="">
+                                                    <p class="red">Platinum Access</p>
+                                                </div>
+
+                                                <div class="content_conts">
+                                                    <h4>LSQ Condos</h4>
+                                                    
+                                                    <ul>
+                                                        <li> <img src="img/developer.svg" alt="">
+                                                            <p>Developer - Greenpark Group</p>
+                                                        </li>
+                                                        <li> <img src="img/dolor.svg" alt="">
+                                                            <p>From $617,900’S Can</p>
+                                                        </li>
+                                                        <li> <img src="img/homes.svg" alt="">
+                                                            <p>Occupancy - Jan 2025</p>
+                                                        </li>
+                                                        <li> <img src="img/map-icon.svg" alt="">
+                                                            <p>382 Dundas St E, Oakville, On L6H 6Z9</p>
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="buttons">
+                                                        <a href="#">View Project</a>
+                                                        <a href="#">Compare</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="center_bta">
+                                        <a href="#">View More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calcul">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="heding">
+                            <h4>Commission <span>Calculator</span></h4>
+                            <p>This Calculator will help you to estimate your commission amount for any Pre-Construction project.</p>
+                          </div>
+                    </div>
+
+                    <div class="col-md-7 col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="purche_price">
+                                    <label for="">Purchase Price:</label>
+                                    <input type="text">
+                                    <label for="">Net Of Hst:</label>
+                                    <input type="text">
+                                    <input type="submit" placeholder="submit" class="submit">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="purche_price">
+                                    <label for="">Your Commision :</label>
+
+                                    <ul>
+                                        <li>
+                                            <span>1%</span>
+                                            <span>-></span>
+                                            <span>=</span>
+                                            <input type="text">
+                                        </li>
+
+                                        <li>
+                                            <span>1%</span>
+                                            <span>-></span>
+                                            <span>=</span>
+                                            <input type="text">
+                                        </li>
+
+                                        <li>
+                                            <span>1%</span>
+                                            <span>-></span>
+                                            <span>=</span>
+                                            <input type="text">
+                                        </li>
+
+                                        <li>
+                                            <span>1%</span>
+                                            <span>-></span>
+                                            <span>=</span>
+                                            <input type="text">
+                                        </li>
+                                    </ul>
+
+                                    <label for="">Enter Your % Commision :</label>
+
+                                    <ul class="list_inpu">
+                                        <li>
+                                            <input type="text">
+                                            <span>% -> =</span>
+                                            <input  type="text"style="width: 50%; margin: 0;">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="heding">
+                    <h4>Pre - Construction <span>Team</span></h4>
+            </div>
+        </section>
+        <section class="team_2">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="millin remove_css">
+                  <div class="col-md-12 col-lg-12">
+                    <div class="admin_lis paddin_0">
+      
+                      <ul>
+                        <li>
+                          <img src="img/Admin-Profile-Vector-PNG-File.png" alt="">
+                          <h4>Abhijeet</h4>
+                          <p>Agent Support</p>
+                        </li>
+      
+                        <li>
+                          <img src="img/Admin-Profile-Vector-PNG-File.png" alt="">
+                          <h4>Manya</h4>
+                          <p>Millennium Media Support</p>
+                        </li>
+      
+                        <li>
+                          <img src="img/Admin-Profile-Vector-PNG-File.png" alt="">
+                          <h4>Harman</h4>
+                          <p>Design Support</p>
+                        </li>
+      
+                        <li>
+                          <img src="img/Admin-Profile-Vector-PNG-File.png" alt="">
+                          <h4>Dk</h4>
+                          <p>Marketing Support</p>
+                        </li>
+      
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-lg-2">
+                        <div class="footer_logo">
+                            <img src="img/remax.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-10">
+                        <div class="footer_details">
+                            <div class="to_12">
+                                <h4>RE/MAX Millennium Real Estate Inc. Brokerage</h4>
+                                <div class="ul_list">
+                                    <ul>
+                                        <li>81 Zenway Blvd #25, Woodbridge, ON L4H 0S5</li>
+                                        <li>5 Montpelier StBrampton, ON L6Y 6H4</li>
+                                    </ul>
+                                </div>
+                                <a href="tel:905-262-2200">905-262-2200</a>
+
+                                <div class="trem_ul">
+                                    <ul>
+                                        <li><a href="#">PRIVACY POLICY</a></li>
+                                        <li><a href="#">TERMS & CONDITIONS</a></li>
+                                        <li><a href="#">SUPPORT</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="socil">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="img/21.svg" alt=""></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"> <img src="img/22.svg" alt=""></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><img src="img/23.svg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="copy_right">
+                            <p>MLS®, Multiple Listing Service®, REALTOR®, and the associated logos are trademarks of The
+                                Canadian Real
+                                Estate Association (CREA) & National Association of REALTORS® (NAR) RE/MAX MILLENNIUM
+                                REAL ESTATE
+                                COPYRIGHT 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
